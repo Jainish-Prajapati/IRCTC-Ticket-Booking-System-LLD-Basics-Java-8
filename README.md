@@ -29,7 +29,7 @@ The system provides the following features:
 ### 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Jainish-Prajapati/IRCTC-LLD-Basics.git
+git clone https://github.com/Jainish-Prajapati/IRCTC-Ticket-Booking-System-LLD-Java8-Basics.git
 ```
 
 ### 2. Build the project:
