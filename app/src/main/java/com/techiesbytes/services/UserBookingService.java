@@ -21,19 +21,26 @@ public class UserBookingService {
 	
 	private ObjectMapper objectMapper = new ObjectMapper();
 	
+	// Absolute path 
 	private static final String USERS_PATH = "app/src/main/java/com/techiesbytes/localDb/users.json";
 	
 	public UserBookingService(User user1) throws IOException{
 		this.user = user1;
-		
-		File users = new File(USERS_PATH);
-		
-		userList = objectMapper.readValue(users, new TypeReference<List<User>>() {});
+		loadUserListFromFile();
 	}
+	
+    public UserBookingService() throws IOException {
+        loadUserListFromFile();
+    }
+    
+    private List<User> loadUserListFromFile() throws IOException {
+		File users = new File(USERS_PATH);
+		return objectMapper.readValue(users, new TypeReference<List<User>>() {});
+    }
 	
     public Boolean loginUser(){
         Optional<User> foundUser = userList.stream().filter(user1 -> {
-            return user1.getName().equals(user.getName()) && UserServiceUtil.checkPassword(user.getPassword(), user1.getHashPasswd());
+            return user1.getName().equals(user.getName()) && UserServiceUtil.checkPassword(user.getPassword(), user1.getHashedPassword());
         }).findFirst();
         return foundUser.isPresent();
     }
@@ -55,7 +62,7 @@ public class UserBookingService {
     
     public void fetchBookings(){
         Optional<User> userFetched = userList.stream().filter(user1 -> {
-            return user1.getName().equals(user.getName()) && UserServiceUtil.checkPassword(user.getPassword(), user1.getHashPasswd());
+            return user1.getName().equals(user.getName()) && UserServiceUtil.checkPassword(user.getPassword(), user1.getHashedPassword());
         }).findFirst();
         if(userFetched.isPresent()){
             userFetched.get().printTickets();

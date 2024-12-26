@@ -3,7 +3,7 @@
     "user_id": "jp123",
     "name": "Jainish Prajapati",
     "hashed_password": "jainish12345",
-    "tickets_booked": [
+    "booked_tickets": [
       {
         "source": "Ahmedabad",
         "destination": "Mumbai",
