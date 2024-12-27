@@ -1,1 +1,1 @@
-[{"name":"Jainish Prajapati","password":null,"hashed_password":"jainish12345","tickets_booked":null,"user_id":"jp123"},{"name":"carl","password":"carl123","hashed_password":"$2a$10$EeqdAOyQKbGW8KkTZ3glkurTCFwKXO/AYVxLG2IW9x1q8FGl9HfN.","tickets_booked":[],"user_id":"be5a7af8-50bc-4702-9b20-76b4ebed452b"}]
+[{"name":"carl","password":"carl123","hashed_password":"$2a$10$EeqdAOyQKbGW8KkTZ3glkurTCFwKXO/AYVxLG2IW9x1q8FGl9HfN.","tickets_booked":[],"user_id":"be5a7af8-50bc-4702-9b20-76b4ebed452b"}]
