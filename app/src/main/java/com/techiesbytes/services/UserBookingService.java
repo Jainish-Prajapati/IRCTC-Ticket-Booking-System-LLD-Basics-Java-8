@@ -33,9 +33,16 @@ public class UserBookingService {
         loadUserListFromFile();
     }
     
-    private List<User> loadUserListFromFile() throws IOException {
+    private void loadUserListFromFile() throws IOException {
 		File users = new File(USERS_PATH);
-		return objectMapper.readValue(users, new TypeReference<List<User>>() {});
+        if (users.exists() && users.length() > 0) {
+            // Deserialize the existing user list from file
+            this.userList = objectMapper.readValue(users, new TypeReference<List<User>>() {});
+        } else {
+            // Initialize with an empty list if the file does not exist or is empty
+            this.userList = new ArrayList<>();
+        }
+		// return objectMapper.readValue(users, new TypeReference<List<User>>() {});
     }
 	
     public Boolean loginUser(){
