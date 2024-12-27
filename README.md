@@ -44,4 +44,4 @@ gradle run
 
 ## Collaboration
 
-If you are willing to help, learn more in-depth about Java topics and this project(i genuinely tho), I encourage you to consider collaborating with me on this project. Feel free to reach out if you're interested in contributing, learning, or exploring more about Core Java, Low-Level Design (LLD), and backend technologies.
+If you are willing to help, learn more in-depth about Java topics and this project, I encourage you to consider collaborating with me on this project. Feel free to reach out if you're interested in contributing, learning, or exploring more about Core Java, Low-Level Design (LLD), and backend technologies.
