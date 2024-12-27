@@ -22,7 +22,7 @@ The system provides the following features:
   - Maps
   - Collections (Lists, Sets, Maps, etc.)
 - **JSON** for Offline Database (stored in `.json` files)
-- **Jackson** for JSON parsing and object serialization/deserialization
+- **Jackson & TypeReference** for JSON parsing and to map json data with entities and object serialization/deserialization
 
 ## Setup and Installation
 
